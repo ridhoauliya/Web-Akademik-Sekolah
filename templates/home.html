@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/home.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">SMAN 1 TOBOALI<span>.</span></a>
+        
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="content">
+        <h2>SELAMAT DATANG</h2>
+        <p>
+            "Jadilah bagian dari perjalanan pendidikan yang penuh inspirasi!
+            Bergabunglah bersama kami di sekolah ini, tempat di mana impian dan 
+            potensimu berkembang. Bersama, kita akan menjelajahi dunia ilmu pengetahuan dan menciptakan kenangan yang tak terlupakan. 
+            Mari bergabung dan jadilah bagian dari komunitas siswa 
+            yang dinamis dan penuh semangat! 📚✨"
+        </p>
+        <button type="button"><a href="/login">Masuk</a></button></a>
+      </div>
+    </section>
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    <script>
+        // Kode JavaScript Anda di sini
+
+        // Menangani klik pada tombol "Masuk"
+        document.getElementById("loginButton").addEventListener("click", function() {
+            // Mengarahkan pengguna ke halaman login.html (sesuaikan path jika perlu)
+            window.location.href = "login";
+        });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitas</title>
+    <link rel="stylesheet" href="/static/fasilitas.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/static/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">{{ username }}<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/fasilitas">Fasilitas</a></li>
+          <li><a href="/jadwal">Jadwal</a></li>
+          <li><a href="/guru">Guru</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+    <section class="main swiper mySwiper">
+      <div class="wrapper swiper-wrapper">
+        <div class="slide swiper-slide">
+          <img src="../static/images/Gymnasium.png" alt="" class="image" />
+          <div class="image-data">
+            <h2>
+              Gymnasium
+            </h2>            
+            <span class="text">
+              "Fasilitas olahraga yang dirancang khusus untuk kegiatan fisik dan kebugaran.<br>
+              Selain itu, gymnasium juga sering digunakan untuk kegiatan selain olahraga, 
+              seperti acara komunitas, acara sekolah, konser atau pertunjukan 
+              festival sekolah dan masih banyak lagi."
+            </span>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="../static/images/perpus.png" alt="" class="image" />
+          <div class="image-data">
+            <h2>
+              Perpustakaan
+            </h2>
+            <span class="text">
+              "Perpustakaan kami memiliki koleksi buku yang beragam, dari fiksi hingga non-fiksi, 
+              dan sumber daya digital terkini, kami siap menjadi sumber inspirasi utama 
+              bagi semua pencinta literasi."
+            </span>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="../static/images/kelas.png" alt="" class="image" />
+          <div class="image-data">
+            <h2>
+              Ruang Kelas
+            </h2>
+            <span class="text">
+              "Di sini, kami bukan hanya menyediakan ruang fisik untuk belajar, 
+              tetapi menciptakan lingkungan yang menginspirasi dan mendukung pertumbuhan siswa. 
+              Ruang kelas kami dirancang dengan perhatian khusus untuk menciptakan pengalaman 
+              pembelajaran yang dinamis dan menyenangkan. Fasilitas modern, teknologi mutakhir, dan 
+              dekorasi yang kreatif menciptakan atmosfer yang memotivasi."
+            </span>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="../static/images/Sportfield.png" alt="" class="image" />
+          <div class="image-data">
+            <h2>
+              Lapangan olahraga
+            </h2>
+            <span class="text">
+              "Kami memiliki lapangan yang cukup untuk aktivitas olahraga, bukan hanya itu peralatan
+               olahraga kami lengkap agar siswa dapat menikmati pelajaran dengan senang."
+            </span>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="../static/images/Tennis.png" alt="" class="image" />
+          <div class="image-data">
+            <h2>
+              Lapangan Tenis
+            </h2>
+            <span class="text">
+              "Kami juga memiliki lapangan tenis untuk siswa yang ingin bermain tenis."
+            </span>
+          </div>
+      </div>
+      <div class="slide swiper-slide">
+        <img src="../static/images/Haneoka_Cafeteria.png" alt="" class="image" />
+        <div class="image-data">
+          <h2>
+            Kantin
+          </h2>
+          <span class="text">
+            "Nikmati suasana santai dan ramah di kantin kami, tempat yang cocok untuk 
+            bertemu teman-teman sambil menikmati santapan yang baik. Jadikan pilihan sehat 
+            sebagai gaya hidup Anda, kunjungi kantin sehat kami ini, 
+            dan hadapi hari-hari dengan energi positif dari makanan yang menyehatkan!"
+          </span>
+        </div>
+      </div>
+      </div>
+
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="/static/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+  
+  </body>
+</html>

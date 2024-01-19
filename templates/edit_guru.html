@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Guru</title>
+    <link rel="stylesheet" href="/static/rank copy.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a class="logo" href="#">{{ username }}<span>.</span></a>
+          <ul class="menu-links">
+            <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/fasilitas">Fasilitas</a></li>
+            <li><a href="/jadwal">Jadwal</a></li>
+            <li><a href="/guru">Guru</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+          <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+      </header>
+    <section class="hero-section">
+        <h1>Edit Guru</h1>
+        <form action="{{ url_for('edit_guru', id=guru[0]) }}" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" value="{{ guru[1] }}" required><br>
+
+            <label for="mata_pelajaran">Mata Pelajaran:</label>
+            <input type="text" name="mata_pelajaran" value="{{ guru[2] }}" required><br>
+
+            <label for="jabatan">Jabatan:</label>
+            <input type="text" name="jabatan" value="{{ guru[3] }}" required><br>
+
+            <input type="submit" value="Simpan Perubahan">
+        </form>
+        <a href="{{ url_for('guru_list') }}">Kembali ke Daftar Guru</a>
+    </section>
+</body>
+</html>

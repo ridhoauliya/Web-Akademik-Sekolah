@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru</title>
+    <link rel="stylesheet" href="/static/guru.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">{{ username }}<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/fasilitas">Fasilitas</a></li>
+          <li><a href="/jadwal">Jadwal</a></li>
+          <li><a href="/guru">Guru</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="atas">
+        <h1>Guru</h1>
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Mata Pelajaran</th>
+            <th>Jabatan</th>
+            <th>Action</th>
+          </tr>
+          
+        </table>
+      </div>
+      <div class="content">
+        <table border="1">
+          {% for guru in guru_list %}
+          <tr>
+            <td>{{ guru[0] }}</td>
+            <td>{{ guru[1] }}</td>
+            <td>{{ guru[2] }}</td>
+            <td>{{ guru[3] }}</td>
+            <td>
+              <a href="{{ url_for('edit_guru', id=guru[0]) }}">Edit</a>
+              <a href="{{ url_for('delete_guru', id=guru[0]) }}">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="hero">
+        <a href="{{ url_for('add_guru') }}">Tambah Guru</a>
+      </div>
+    </section>
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal</title>
+    <link rel="stylesheet" href="/static/jadwal.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/static/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">{{ username }}<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/fasilitas">Fasilitas</a></li>
+          <li><a href="/jadwal">Jadwal</a></li>
+          <li><a href="/guru">Guru</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+    <section class="main swiper mySwiper">
+      <div class="wrapper swiper-wrapper">
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X MIPA 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Senam</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X MIPA 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>Fisika</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Fisika</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Seni Budaya</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Biologi</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Seni Budaya</td>
+                </tr>
+            </table>
+
+          <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X MIPA 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Fisika</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>Seni Budaya</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X MIPA 4</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Fisika</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Kimia</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Matematika</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Biologi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Biologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X MIPA 5</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Biologi</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Kimia</td>
+                    <td>Matematika</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>PAI</td>
+                    <td>Matematika</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI MIPA 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Biologi</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Fisika</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI MIPA 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Biologi</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Kimia</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI MIPA 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Seni Budaya</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Fisika</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Penjas</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Seni Budaya</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI MIPA 4 </h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Penjas</td>
+                    <td>Biologi</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Matematika</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Kimia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI MIPA 5</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>PAI</td>
+                    <td>Kimia</td>
+                    <td>Seni Budaya</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>PAI</td>
+                    <td>Kimia</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Fisika</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Seni Budaya</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Biologi</td>
+                    <td>Matematika</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII MIPA 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Penjas</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>Fisika</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII MIPA 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Seni Budaya</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Biologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII MIPA 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Kimia</td>
+                    <td>Fisika</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>PAI</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Fisika</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>PAI</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Fisika</td>
+                    <td>Biologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII MIPA 4</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Seni Budaya</td>
+                    <td>Fisika</td>
+                    <td>Bahasa Indonesia/td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Kimia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Fisika</td>
+                    <td>Kimia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Kimia</td>
+                    <td>Fisika</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII MIPA 5</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Biologi</td>
+                    <td>PAI</td>
+                    <td>Kimia</td>
+                    <td>Istirahat</td>
+                    <td>Biologi</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Penjas</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Penjas</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Biologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Fisika</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Fisika</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Biologi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Penjas</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Kimia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X IPS 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Ekonomi</td>
+                    <td>Sosiologi</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Geografi</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Geografi</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Sosiologi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Geografi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X IPS 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Geografi</td>
+                    <td>Ekonomi</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Ekonomi</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>PAI</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Sosiologi</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Sosiologi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Geografi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas X IPS 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Geografi</td>
+                    <td>PAI</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Ekonomi</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Sosiologi</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sosiologi</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Sosiologi</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Seni Budaya</td>
+                    <td>Ekonomi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI IPS 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Seni Budaya</td>
+                    <td>Penjas</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>Sosiologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Ekonomi</td>
+                    <td>Penjas</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>PAI</td>
+                    <td>Geografi</td>
+                    <td>Seni Budaya</td>
+                    <td>Istirahat</td>
+                    <td>Sosiologi</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Matematika</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Ekonomi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>PAI</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Geografi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI IPS 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Geografi</td>
+                    <td>Seni Budaya</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Penjas</td>
+                    <td>Matematika</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Ekonomi</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Matematika</td>
+                    <td>Sosiologi</td>
+                    <td>Istirahat</td>
+                    <td>Geografi</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Matematika</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Sosiologi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Matematika</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sosiologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XI IPS 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Penjas</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Seni Budaya</td>
+                    <td>Istirahat</td>
+                    <td>Sosiologi</td>
+                    <td>PAI</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Sosiologi</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Ekonomi</td>
+                    <td>Geografi</td>
+                    <td>Sosiologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Matematika</td>
+                    <td>Ekonomi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Seni Budaya</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>Geografi</td>
+                    <td>PAI</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII IPS 1</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>Sosiologi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Penjas</td>
+                    <td>Ekonomi</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>PAI</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Sosiologi</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Matematika</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Seni Budaya</td>
+                    <td>Geografi</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Geografi</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Senam</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII IPS 2</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Matematika</td>
+                    <td>PAI</td>
+                    <td>Penjas</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Sosiologi</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Sosiologi</td>
+                    <td>Ekonomi</td>
+                    <td>Matematika</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Geografi</td>
+                    <td>Seni Budaya</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Seni Budaya</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Ekonomi</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Penjas</td>
+                    <td>Sosiologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <div class="image-data">
+            <h2>Jadwal Mata Pelajaran - Kelas XII IPS 3</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>07:30 - 09:00</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Geografi</td>
+                    <td>Seni Budaya</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Penjas</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Sosiologi</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Istirahat</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Penjas</td>
+                    <td>Seni Budaya</td>
+                    <td>PAI</td>
+                    <td>Istirahat</td>
+                    <td>Ekonomi</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>Ekonomi</td>
+                    <td>Istirahat</td>
+                    <td>Seni Budaya</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Senam</td>
+                    <td>Sejarah Indonesia</td>
+                    <td>Bahasa Inggris</td>
+                    <td>Istirahat</td>
+                    <td>PAI</td>
+                    <td>Sosiologi</td>
+                </tr>
+            </table>
+
+            <h3>15:30 - 16:00: Ekstrakurikuler</h3>
+          </div>
+        </div>
+        
+      
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+
+      </div>
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="/static/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+  
+  </body>
+</html>

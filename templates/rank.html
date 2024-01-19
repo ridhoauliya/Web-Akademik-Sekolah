@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ranking</title>
+    <link rel="stylesheet" href="/static/rank.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">{{ username }}<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/fasilitas">Fasilitas</a></li>
+          <li><a href="/jadwal">Jadwal</a></li>
+          <li><a href="/guru">Guru</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <h1>Search Data</h1>
+
+      <form id="searchForm">
+          <div>
+              <label for="name">Nama:</label>
+              <input type="text" id="name" name="name">
+          </div>
+  
+          <div>
+              <label for="class">Kelas:</label>
+              <input type="text" id="class" name="class">
+          </div>
+  
+          <div>
+              <label for="rank">Rank:</label>
+              <input type="text" id="rank" name="rank">
+          </div>
+  
+          <button type="button" onclick="searchData()">Search</button>
+          <button type="button" onclick="showAllData()">Show All Data</button>
+          <button type="button" onclick="clearResults()">Clear Results</button>
+      </form>
+  
+      <div id="searchResults">
+          <!-- Hasil pencarian akan ditampilkan di sini -->
+      </div>
+    </section>
+
+    <script>
+      // Simulasikan data (Anda dapat menggantinya dengan data sebenarnya dari server)
+      const data = [
+          { name: "RINDU RAMADHA ZAHIRA", class: "X Mipa 1", rank: 1 },
+          { name: "MUTIA QAUNA HIDAYAH", class: "X Mipa 1", rank: 2 },
+          { name: "NAYLA MUTIARA PUTRI", class: "X Mipa 1", rank: 3 },
+          { name: "ANDIEN CANDRAMEGA", class: "X Mipa 2", rank: 1 },
+          { name: "ULI MUSLIHAH", class: "X Mipa 2", rank: 3 },
+          { name: "KHAYLA AZIZAH RAHMAN", class: "X Mipa 3", rank: 1 },
+          { name: "ANISA NURIA ZIZAH", class: "X Mipa 3", rank: 2 },
+          { name: "MAHELGA NURULITA", class: "X Mipa 3", rank: 3 },
+          { name: "KAILA MALIKARASA LISARDY", class: "X Mipa 4", rank: 1 },
+          { name: "AULIA AZ ZAHRA", class: "X Mipa 4", rank: 2 },
+          { name: "NURUL AISYIAH", class: "X Mipa 4", rank: 3 },
+          { name: "ADITYA MAHENDRA", class: "X Mipa 5", rank: 1 },
+          { name: "ROLA DWI ANANTA", class: "X Mipa 5", rank: 2 },
+          { name: "FAZLY", class: "X Mipa 5", rank: 3 },
+          { name: "TRI SANDIA MUKTI", class: "X Ips 1", rank: 1 },
+          { name: "KHOIRUNNISA ARRIFAH", class: "X Ips 1", rank: 2 },
+          { name: "INTAN NUR ANGGRAINI", class: "X Ips 1", rank: 3 },
+          { name: "AGIS APRILIA", class: "X Ips 2", rank: 1 },
+          { name: "SELIN ZULFA ANANDA", class: "X Ips 2", rank: 2 },
+          { name: "ANGGELINA TIRANI", class: "X Ips 2", rank: 3 },
+          { name: "VERANITA INDRIATI", class: "X Ips 3", rank: 1 },
+          { name: "NAFISHA SHAFA ALHUSNA", class: "X Ips 3", rank: 2 },
+          { name: "ANISA NAZWA AULIA", class: "X Ips 3", rank: 3 },
+          { name: "PUPUT WULAN WIJAYA KHUSUMA", class: "XI Mipa 1", rank: 1 },
+          { name: "SHENNY ELVENA SUKATON", class: "XI Mipa 1", rank: 2 },
+          { name: "FERDY RAMZ", class: "XI Mipa 1", rank: 3 },
+          { name: "	ZASKIA SAGITA NOVITASARI", class: "XI Mipa 2", rank: 1 },
+          { name: "ANDINA SETYANING PUTRI", class: "XI Mipa 2", rank: 2 },
+          { name: "DEDE EVA AMELIA", class: "XI Mipa 2", rank: 3 },
+          { name: "NABILA SYIFA ARIFIN", class: "XI Mipa 3", rank: 1 },
+          { name: "INAYATUN NUR ARIFAH", class: "XI Mipa 3", rank: 2 },
+          { name: "VANIA REVA ANITA", class: "XI Mipa 3", rank: 3 },
+          { name: "DARMAYANI", class: "XI Mipa 4", rank: 1 },
+          { name: "ANISAH NURUL AJISAH", class: "XI Mipa 4", rank: 2 },
+          { name: "ASTRI KUSUMA YANA", class: "XI Mipa 4", rank: 3 },
+          { name: "HAFID KENCANA", class: "XI Ips 1", rank: 1 },
+          { name: "RULLA ARRIFAH", class: "XI Ips 1", rank: 2 },
+          { name: "INTAN PALUPI AMRI", class: "XI Ips 1", rank: 3 },
+          { name: "ALYA NOVA KARISA", class: "XI Ips 2", rank: 1 },
+          { name: "AZKAH FAHTURROHIM", class: "XI Ips 2", rank: 2 },
+          { name: "SALWA KARIMA", class: "XI Ips 2", rank: 3 },
+          { name: "FANNINA ANANTA", class: "XI Ips 3", rank: 1 },
+          { name: "ELSA DWI AYUNING", class: "XI Ips 3", rank: 2 },
+          { name: "MAURA ZULFATUNNISA", class: "XI Ips 3", rank: 3 },
+          { name: "ALDO FARRAS", class: "XII Mipa 1", rank: 1 },
+          { name: "CITRA SUKMA DEWI", class: "XII Mipa 1", rank: 2 },
+          { name: "ABEL TRI YUNITA", class: "XII Mipa 1", rank: 3 },
+          { name: "Syifa Miftahunnajah", class: "XII MIPA 2", rank: 1 },
+          { name: "INDAH MAYA SARI", class: "XII MIPA 2", rank: 2 },
+          { name: "RIDHO AULIYA FATWA", class: "XII MIPA 2", rank: 3 },
+          { name: "KHAIRUMNI YASMIN", class: "XII MIPA 3", rank: 1 },
+          { name: "NABILAH GITA ALIFFIA", class: "XII MIPA 3", rank: 2 },
+          { name: "GANGSAR PANGESTU", class: "XII MIPA 3", rank: 3 },
+          { name: "NADA NISRINA", class: "XII MIPA 4", rank: 1 },
+          { name: "NILUH DEWA ANJANI", class: "XII MIPA 4", rank: 2 },
+          { name: "MUHAMMAD IZHAR AZHARI", class: "XII MIPA 4", rank: 3 },
+          { name: "SOFHIA PUTRI SETYAWATI", class: "XII IPS 1", rank: 1 },
+          { name: "Retno Damayanti", class: "XII IPS 1", rank: 2 },
+          { name: "Fina Damayanti", class: "XII IPS 1", rank: 3 },
+          { name: "Syifa Nailah", class: "XII IPS 2", rank: 1 },
+          { name: "ZIANABIS SASA BELLA", class: "XII IPS 2", rank: 2 },
+          { name: "MELA ALDIANA", class: "XII IPS 2", rank: 3 },
+          { name: "TARI FEBI LIANDARI", class: "XII IPS 3", rank: 1 },
+          { name: "RENDIRA AMANDA", class: "XII IPS 3", rank: 2 },
+          { name: "TRIA MAELA LOGIS", class: "XII IPS 3", rank: 3 },
+
+          
+          // Tambahkan data lainnya sesuai kebutuhan
+      ];
+
+      function searchData() {
+          const name = document.getElementById('name').value.toLowerCase();
+          const className = document.getElementById('class').value.toLowerCase();
+          const rank = parseInt(document.getElementById('rank').value);
+
+          const results = data.filter(item => {
+              const itemName = item.name.toLowerCase();
+              const itemClass = item.class.toLowerCase();
+
+              return (itemName.includes(name) || name === "") &&
+                  (itemClass.includes(className) || className === "") &&
+                  (isNaN(rank) || item.rank === rank);
+          });
+
+          displayResults(results);
+      }
+
+      function showAllData() {
+          displayResults(data);
+      }
+
+      function clearResults() {
+          document.getElementById('searchResults').innerHTML = "";
+      }
+
+      function displayResults(results) {
+          const resultsContainer = document.getElementById('searchResults');
+          resultsContainer.innerHTML = "";
+
+          if (results.length === 0) {
+              resultsContainer.innerHTML = "<p>No results found.</p>";
+          } else {
+              const resultList = document.createElement('ul');
+              results.forEach(item => {
+                  const listItem = document.createElement('li');
+                  listItem.textContent = `Nama: ${item.name}, Kelas: ${item.class}, Ranking: ${item.rank}`;
+                  resultList.appendChild(listItem);
+              });
+              resultsContainer.appendChild(resultList);
+          }
+      }
+    </script>
+    
+  </body>
+</html>
